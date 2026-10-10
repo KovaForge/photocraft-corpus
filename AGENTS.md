@@ -74,3 +74,41 @@ history, and submodules cause init and detached-HEAD friction for contributors.
 - **One folder per source application**, with its generator under `tools/`.
 - **When fetching anything,** use the generic `Photocraft-dev` User-Agent and never put personal
   details in requests.
+
+<!-- kovaforge-fork-context -->
+## KovaForge fork context
+
+Forked from: `storytold/photocraft-corpus`
+Fork date: 2026-10-10
+Forked by: Vladislava Kova
+
+### Git identity
+
+Before any commit in this repo, use the per-person wrapper (`git-vladislava`, `git-mikhail`, `git-declan`, …). Do not bare `git push`.
+
+### Commit alias
+
+Use `git commit-kf "message"` instead of plain `git commit`. The alias enforces identity validation, a staged-file secret scan, and Co-authored-by trailers.
+
+See: `vault/protocols/KVF-DEV-POL-001_Git_Policy.md`
+
+### Co-authors (permanent)
+
+Every commit must include:
+
+```
+Co-authored-by: Michael D <McoreD@users.noreply.github.com>
+Co-authored-by: vladislava-kova-kf <vladislava-kova-kf@users.noreply.github.com>
+```
+
+### Clone paths (this host)
+
+Linux canonical root is `/home/mike/Work` (relocated from `/Users/mike/Projects`).
+
+- Upstream: `/home/mike/Work/storytold/photocraft-corpus`
+- KovaForge fork: `/home/mike/Work/KovaForge/photocraft-corpus`
+- Remotes on the fork: `origin` = `https://github.com/KovaForge/photocraft-corpus.git`, `upstream` = `https://github.com/storytold/photocraft-corpus.git`
+
+### Secrets
+
+Never commit `.env`, `*.env`, `secrets.json`, or `credentials.*`.
